@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['ag']))
 
 	header('location:loginAdmin.php');
-
+include "cnx.php";
 ?>
 <!DOCTYPE html>
 <html>

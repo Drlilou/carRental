@@ -55,7 +55,9 @@ document.getElementById("search").submit();
              </h2>
              <?php 
 require_once 'cnx.php';
+$search='';
 extract($_GET);
+
  $sql="select * from  voiture natural join utilitaire where model like '%$search%' or marque like '%$search%'" ;
  
 
@@ -102,6 +104,7 @@ extract($_GET);
       <h2>particulier </h2>
 
              <?php 
+
 
  $sql="select * from  voiture natural join particulier where model like '%$search%' or marque like '%$search%'";
  if (isset($ag) and (RemoveSpecialChar( $ag)!='')){
