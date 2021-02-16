@@ -1,0 +1,190 @@
+body{
+
+ 
+}
+h1, h2, h3 ,h4,h5,p,ul,li{
+    color: black;
+ 
+}
+nav .linav{
+ padding-left: 30px;
+ padding-right: 30px;
+ border-right: 1px solid #f3eeee; 
+ font-size:18px ;
+ font-weight: 500;
+ text-transform: uppercase;
+ 
+}
+
+#btnjoin{
+    margin: 5px 5px;
+    background-color: rgb(6, 161, 250);
+    color: #FFF;
+    border-radius: 5px;
+    -webkit-border-radius: 5px 5px;
+    -moz-border-radius: 5px / 5px;
+    border-radius: 5px / 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  
+}
+#btnjoin a{
+    color: #FFF; 
+}
+#btnjoin a:hover{
+background:#cce6ff; 
+}
+
+#btnlogin
+{
+  margin: 5px 5px;
+  background-color: rgb(75, 78, 80);
+  color: #FFF;
+  -webkit-border-radius: 5px 5px;
+ -moz-border-radius: 5px / 5px;
+  border-radius: 5px / 5px;
+ box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+#btnlogin a{
+    color: #FFF; 
+}
+#btnlogin a:hover{
+    background:#666699;
+}
+
+#showcase{
+    margin-top: 20px;
+    width:100%;
+    min-height:600px;
+    background:url('../images/range4.jpg') no-repeat ;
+   /*** -webkit-filter: blur(1px);
+    filter: blur(1px);*/
+text-align: center;
+color: #ffffff;
+}
+#showcase img {
+    max-width:100%; 
+    max-height:auto;
+   
+    
+   
+}
+#showcase h1{
+    color: red;
+    font-size: 50px;
+    font-weight:lighter;
+   color: white;
+   padding-top: 100px;
+   padding-left: 30%;
+
+}
+#showcase #showrate{
+    font-size:50px;
+    font-weight: bold;
+
+}
+.dispwell{
+ width: 30%;
+ float: left;
+}
+.dispwell label{
+    color:blue;
+}
+.badge{
+ font-size: 24px;
+ border: wheat 3px solid;
+}
+/** for well in index*/
+.wel-special{
+    margin-top: 500px;
+}
+.extrapage{
+    margin-top:50px;
+}
+.extrapage p{
+    font-size: 24px;
+    color: brown;
+    font-weight: bold;
+    text-align: center;
+}
+.wel-special p{
+    font-size: 24px;
+    color: brown;
+    font-weight: bold;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container-card {
+    padding: 2px 16px;
+    color:black;
+}
+.footer{
+    width: 100%;
+    height: 100px;
+    color: #666699;
+    
+}
+.footer p{
+    padding-top: 50px;
+}
+
+.carentalOl{
+ list-style: none;
+}
+.carentalOl li{
+    font-weight: 300;
+    
+    text-align: left;
+    margin: 5px;
+    padding: 5px;
+}
+.carentalOl li a{
+    text-decoration: none;
+}
+.carentalOl li a:hover,visited{
+    color: red;
+}
+#callnumber{
+    font-size: 18px;
+    color: blue;
+    padding-left: 20px;
+}
+ #callpar{
+    font-size: 16px;
+    padding: 10px;
+    text-align: left;
+    font-weight: 200;
+    /**
+     *
+     * Block comment
+     *
+     */
+    
+  
+}
+.carRenatlH4{
+ margin-top: 20px;
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: 400;
+}
+.footer{
+ background:#dae6f0;
+}
+.footer p{
+    font-weight: 200;
+    text-align: center;
+}
+.needhelp{
+    font-weight: 300;
+    color: red;
+    padding-left: 20px;
+}
