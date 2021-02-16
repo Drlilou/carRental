@@ -32,29 +32,42 @@
      <h1>CARS  
 
                
-            
+           <script type="text/javascript">
+             
+             function submitform()
+{
+document.getElementById("search").submit();
+
+}
+           </script> 
      <?php 
 
                 if (isset( $agence))
                     echo '<a href="upload.php">new Car</a>';
                  ?> </h2>
+                 <p><form method="GET" id="search" >
+                  <p onclick ="submitform()">Search</p> <input type="text" name="search"  class="form-control">
+
+                 </form></p>
              <h2>utilitaire 
 
                
              </h2>
              <?php 
 require_once 'cnx.php';
- $sql="select * from  voiture natural join utilitaire";
- extract($_GET);
+extract($_GET);
+ $sql="select * from  voiture natural join utilitaire where model like '%$search%' or marque like '%$search%'" ;
+ 
 
  if (isset($ag) and (RemoveSpecialChar( $ag)!='')){
   
-    $sql.= ' where ID_AGENCE ='. RemoveSpecialChar( $ag) ;
+    $sql.= ' and  ID_AGENCE ='. RemoveSpecialChar( $ag) ;
 
  }
  if (isset($agence) ){
   
-    $sql.= ' where ID_AGENCE ='. RemoveSpecialChar( $agence) ;
+    $sql.= ' and  ID_AGENCE ='. RemoveSpecialChar( $agence) ;
+    
     
  }
  
@@ -90,14 +103,14 @@ require_once 'cnx.php';
 
              <?php 
 
- $sql="select * from  voiture natural join particulier";
+ $sql="select * from  voiture natural join particulier where model like '%$search%' or marque like '%$search%'";
  if (isset($ag) and (RemoveSpecialChar( $ag)!='')){
   
-    $sql.= ' where ID_AGENCE ='. RemoveSpecialChar( $ag);
+    $sql.= ' and ID_AGENCE ='. RemoveSpecialChar( $ag);
  }
   if (isset($agence) ){
   
-    $sql.= ' where ID_AGENCE ='. RemoveSpecialChar( $agence) ;
+    $sql.= ' and ID_AGENCE ='. RemoveSpecialChar( $agence) ;
     
  }
  //echo $sql;
