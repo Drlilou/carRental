@@ -40,7 +40,10 @@
                                  <li class="linav"><a href="./location.php">location</a></li>
                           
                             <?php  
-                          } ?>
+                          } if(isset($_SESSION['id']))
+                                  echo ' <li class="linav"><a href="./location.php">My location</a></li>';
+
+                          ?>
                            <li class="linav"><a href="./cars.php">Cars</a></li>
                             <li class="linav "><a href="./about.php">About</a></li>
                             <li class="linav "><a href="./contact.php">Contact</a></li>

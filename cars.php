@@ -134,6 +134,8 @@ extract($_GET);
                                <h4><b><?php echo $row[4]; ?></b></h4>
                               <h4><b><?php echo $row[5]; ?></b></h4> 
                              <p> kilom : <?php echo $row[3]; ?> km</p> 
+                              <p> <a href="louer.php?id=<?php echo $row[0]; ?>">louer</a></p> 
+                            
                               </div>
                       </div>
                  </div>

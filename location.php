@@ -22,8 +22,16 @@
                 
                
               <div class="well extrapage">
-                    <p> location de notre agence</p>
 
+                <?php 
+                if(isset($_SESSION['ag'])){
+                 ?>
+                    <p> location de notre agence</p>
+                    <?php
+                  } if (isset($_SESSION['id'])){ ?>
+                
+                    <p> My location</p>
+              <?php } ?>
                 </div><!--endof special!-->
              <div class="row"> <!--Div box!-->
                            
@@ -63,14 +71,25 @@
     <th>model </th>
       <th>marque </th>
         <th>valider </th>
+        <?php if (isset($_SESSION['ag'])){ ?>
         <th>consulter location </th>
+        <?php } ?>
+
   </tr>
 <?php 
 require_once 'cnx.php';
 
- $sql="select * from  clients natural join location natural join voiture natural join agence  where id_agence=".$_SESSION['ag'];
+ $sql="select * from  clients natural join location natural join voiture natural join agence  where ";
 
+if (isset($_SESSION['ag'])){
 
+  $sql.=" id_agence=".$_SESSION['ag'];
+} 
+if (isset($_SESSION['id'])){
+
+  $sql.="  num_cl like ".$_SESSION['id'];
+}
+//echo $sql;
     $rs = mysqli_query($db,$sql);
 
 
@@ -92,6 +111,8 @@ require_once 'cnx.php';
         }else{
            echo  " <td>".'pas encore traite'  ."</td>";
         }
+
+        if (isset($_SESSION['ag']))
         echo " <td> <a href='loc.php?loc=".$row['id_loc']."'> details</a></td>";
         echo '</tr>';
         $i = $i + 1;

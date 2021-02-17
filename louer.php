@@ -7,9 +7,18 @@
 
     if (isset($_POST['matricule'])){
       extract($_POST);
-    $sql="  INSERT INTO `location` (`id_loc`, `date_loc`, `date_fin_loc`, `kelo`, `ID_AGENCE2`, `NUM_CL`, `MATRICULE`, `valider`) VALUES (NULL, $date1, $date2, NULL, NULL, ".$_SESSION['id'].", '$matricule', '0');";
-     mysqli_query($db, $sql);
-     echo $sql;
+
+        $sql="select * from voiture where matricule like '$matricule'";
+
+        $rs=  mysqli_query($db, $sql);
+        if($row=mysqli_fetch_assoc($rs)){
+            $ID_AGENCE1=$row['ID_AGENCE'];
+             $sql="  INSERT INTO `location` (`id_loc`, `date_loc`, `date_fin_loc`, `kelo`, `ID_AGENCE2`, `NUM_CL`, `MATRICULE`,ID_AGENCE1, `valider`) VALUES (NULL, '$date1', '$date2', NULL, NULL, ".$_SESSION['id'].", '$matricule',$ID_AGENCE1, '0');";
+            mysqli_query($db, $sql);
+      //      echo $sql;
+    //        exit();
+        }
+  //   echo $sql;
 //exit();
  header('location: index.php');
     }else{
