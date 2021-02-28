@@ -57,7 +57,7 @@ extract($_POST);
     if(in_array(strtolower($fileType), $allowTypes)){
         // Upload file to server
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-        	$sql="INSERT INTO `voiture` (`ID_AGENCE`, `MATRICULE`, `DATE_D_ACHAT`, `KILOMETRAGE`, `model`, `marque`, `img`) VALUES (".$_SESSION['ag'].", '$MATRICULE', '$date', '$KILOMETRAGE', '$model', '$marque', '$fileName');";
+        	$sql="INSERT INTO `voiture`(`ID_AGENCE`, `MATRICULE`, `DATE_D_ACHAT`, `KILOMETRAGE`, `model`, `marque`, `img`) VALUES  (".$_SESSION['ag'].", '$MATRICULE', '$date', '$KELOMETRAGE', '$model', '$marque', '$fileName');";
             // Insert image file name into database
           //  echo $sql;//var_dump($_POST);
            mysqli_query($db, $sql);
