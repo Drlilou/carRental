@@ -27,7 +27,7 @@
             
              <h2>Login form  </h2>
              
-                     <form method="post" action="login.php">
+                     <form method="post" action="server.php">
     <?php include('errors.php'); ?>
     <div class="form-group">
       <label>Username</label>
