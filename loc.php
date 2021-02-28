@@ -31,36 +31,27 @@ require_once 'cnx.php';
  $rs=mysqli_query($db, $sql);
   if($row = mysqli_fetch_assoc($rs))
     {
-
-
-
-   
-
-
-
-
        ?>  
-
-             <h2>Locationn  inforamtion  </h2>
-             <div class="row">
-             <div class="col-lg-6">
-                 <h3>Client </h3>
-                 <p>Nom :<?php echo $row['NOM_CL']; ?></p>
-                 <p>address :<?php echo $row['ADD_CL']; ?></p>
-                 <p>Type  :<?php echo $row['TYPE_CL']; ?></p>
-             </div>
-             <div class="col-lg-6">
+        <h2>Locationn  inforamtion  </h2>
+           <div class="row">
+           <div class="col-lg-6">
+              <h3>Client </h3>
+              <p>Nom :<?php echo $row['NOM_CL']; ?></p>
+              <p>address :<?php echo $row['ADD_CL']; ?></p>
+              <p>Type  :<?php echo $row['TYPE_CL']; ?></p>
+           </div>
+           <div class="col-lg-6">
                     <h3>Car </h3>
                     <p>marque :<?php echo $row['marque']; ?></p>
                  <p>model :<?php echo $row['model']; ?></p>
-                 <p>date d'achat   :<?php echo $row['DATE_D_ACAHT']; ?></p>
+                 <p>date d'achat   :<?php echo $row['DATE_D_ACHAT']; ?></p>
 
-  				<p>Kelomertage   :<?php echo $row['KELOMETRAGE']; ?></p>                 
-                </div>
-                 <div class="col-lg-6">
-                    <h3>Operation </h3>
-
-                    <?php 
+  				<p>Kilomertage   :<?php echo $row['KILOMETRAGE']; ?></p>                 
+            </div>
+            <div class="col-lg-6">
+                         <h3>Operation </h3>
+                         <?php 
+                         
                       if ($row["valider"] ==2){
           									echo  " <p>".' deja valider'  ."</p>";
         			   }elseif($row["valider"] ==1){ 

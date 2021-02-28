@@ -154,7 +154,7 @@ if (isset($_POST['kilo_loc'])) {
   
 
 
-    $query="UPDATE `location` SET `kelo` = '$kilometrge' , ID_AGENCE2=$ag  WHERE `location`.`id_loc` = $loc;";
+    $query="UPDATE `location` SET `kilo` = '$kilometrge' , ID_AGENCE2=$ag  WHERE `location`.`id_loc` = $loc;";
     echo $query;
     mysqli_query($db, $query);
   header('location: location.php');

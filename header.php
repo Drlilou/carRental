@@ -14,7 +14,7 @@
                          <li id="btnjoin"><a href="register.php">JOIN NOW</a></li>
                     </ul>
                 </nav>
-                <h3 class="text-muted">Meriam Cars</h3>
+                <h3 class="text-muted">S&M-CarRental</h3>
            </div>
              <?php  }else{?>
       <nav>
@@ -23,7 +23,7 @@
                         <li id="btnjoin"><a href="logout.php">logout</a></li>
                     </ul>
                 </nav>
-                <h3 class="text-muted">G-CarRental</h3>
+                <h3 class="text-muted">S&M-CarRental</h3>
            </div>
              <?php } ?>   
            <div class="header clearfix">
@@ -45,7 +45,7 @@
 
                           ?>
                            <li class="linav"><a href="./cars.php">Cars</a></li>
-                            <li class="linav "><a href="./about.php">About</a></li>
+                            <li class="linav "><a href="./about.php">About </a></li>
                             <li class="linav "><a href="./contact.php">Contact</a></li>
 
                           </ul>

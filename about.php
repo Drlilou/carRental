@@ -24,12 +24,12 @@
              <h2>About Us </h2>
              <div class="row">
              <div class="col-lg-6">
-                 <h3>G-CarRental</h3>
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, excepturi quae. Facilis aspernatur quos in inventore veritatis obcaecati. Laudantium, eaque. A labore veritatis, vero similique inventore consequatur voluptate asperiores ullam.</p>
+                 <h3>S&M-CarRental</h3>
+                 <p>Located in Europe we provide the best services</p>
              </div>
              <div class="col-lg-6">
                     <h3>Our Mission</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, excepturi quae. Facilis aspernatur quos in inventore veritatis obcaecati. Laudantium, eaque. A labore veritatis, vero similique inventore consequatur voluptate asperiores ullam.</p>
+                    <p>We try to provide the best services and please our clients in the best way</p>
                 </div>
             </div>
              

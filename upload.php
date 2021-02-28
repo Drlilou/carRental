@@ -57,7 +57,7 @@ extract($_POST);
     if(in_array(strtolower($fileType), $allowTypes)){
         // Upload file to server
         if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
-        	$sql="INSERT INTO `voiture` (`ID_AGENCE`, `MATRICULE`, `DATE_D_ACAHT`, `KELOMETRAGE`, `model`, `marque`, `img`) VALUES (".$_SESSION['ag'].", '$MATRICULE', '$date', '$KELOMETRAGE', '$model', '$marque', '$fileName');";
+        	$sql="INSERT INTO `voiture` (`ID_AGENCE`, `MATRICULE`, `DATE_D_ACHAT`, `KILOMETRAGE`, `model`, `marque`, `img`) VALUES (".$_SESSION['ag'].", '$MATRICULE', '$date', '$KILOMETRAGE', '$model', '$marque', '$fileName');";
             // Insert image file name into database
           //  echo $sql;//var_dump($_POST);
            mysqli_query($db, $sql);
@@ -105,7 +105,7 @@ extract($_POST);
       <label>date d'achat</label>
 	<input type="date" name="date" class="form-control" required></div>
 	  <div class="form-group">
-      <label>kelmetrage</label>
+      <label>kilometrage</label>
 	<input type="number" name="KELOMETRAGE" step="0.01" class="form-control"required></div>
 	  <div class="form-group">
       <label>model</label>

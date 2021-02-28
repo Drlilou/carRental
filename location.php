@@ -101,9 +101,9 @@ if (isset($_SESSION['id'])){
       echo " <td>$i ";
    //   $row['id_loc']."</td>";
          echo  " <td>".$row['NOM_CL'] ."</td>";
-      echo  " <td>".$row['date_loc'] ."</td>";
-       echo  " <td>".$row["model"] ."</td>";
-        echo  " <td>".$row["marque"] ."</td>";
+         echo  " <td>".$row['date_loc'] ."</td>";
+         echo  " <td>".$row["model"] ."</td>";
+         echo  " <td>".$row["marque"] ."</td>";
         if ($row["valider"] ==2){
           echo  " <td>".'valider'  ."</td>";
         }elseif($row["valider"] ==1){ 
@@ -123,7 +123,7 @@ if (isset($_SESSION['id'])){
                 
                
               <div class="well extrapage">
-                    <p> location a rondre(d'autre agence)</p>
+                    <p> location a rendre(d'autre agence)</p>
 
                 </div><!--endof special!-->
              <div class="row"> <!--Div box!-->
@@ -136,10 +136,9 @@ if (isset($_SESSION['id'])){
     <th>num</th>
     <th>client </th>
     <th>date location </th>
-    
     <th>model </th>
-      <th>marque </th>
-        <th>consulter location </th>
+    <th>marque </th>
+    <th>consulter location </th>
   </tr>
 <?php 
 require_once 'cnx.php';
@@ -152,16 +151,16 @@ require_once 'cnx.php';
     $i = 1;
     while($row = mysqli_fetch_assoc($rs))
     {
-        echo '<tr align="center">';
+      echo '<tr align="center">';
       echo " <td>$i  </td>";
-       echo  " <td>".$row['NOM_CL'] ."</td>";
+      echo  " <td>".$row['NOM_CL'] ."</td>";
       echo  " <td>".$row['date_loc'] ."</td>";
-       echo  " <td>".$row["model"] ."</td>";
-        echo  " <td>".$row["marque"] ."</td>";
+      echo  " <td>".$row["model"] ."</td>";
+      echo  " <td>".$row["marque"] ."</td>";
         if(is_null($row['ID_AGENCE2']))
-        echo " <td> <a href='rondre.php?loc=".$row['id_loc']."'> rondre</a></td>";
+        echo " <td> <a href='rendre.php?loc=".$row['id_loc']."'> rendre</a></td>";
       else
-          echo " <td> deja rondu </td>";
+          echo " <td> deja rendu </td>";
         echo '</tr>';
         $i = $i + 1;
     }
