@@ -8,6 +8,8 @@ $errors = array();
 
 // connect to the database
 require_once 'cnx.php';
+
+
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
@@ -91,7 +93,7 @@ if (isset($_POST['login_user'])) {
 
 
 
-// LOGIN USER
+// LOGIN admin
 if (isset($_POST['login_admin'])) {
 
   $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -129,7 +131,7 @@ if (isset($_POST['login_admin'])) {
 
 
 
-// LOGIN USER
+// valide ou refuser location
 if (isset($_GET['v'])&& isset($_GET['id'])) {
 
   extract($_GET);
@@ -147,7 +149,7 @@ if (isset($_GET['v'])&& isset($_GET['id'])) {
 
 
 
-// LOGIN USER
+// restiter car 
 if (isset($_POST['kilo_loc'])) {
 
   extract($_POST);
