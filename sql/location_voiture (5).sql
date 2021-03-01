@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Structure de la table `agence`
 --
-
+create database location_voiture;
 CREATE TABLE `agence` (
   `ID_AGENCE` int(11) NOT NULL,
   `NOM_AGENCE` varchar(100) DEFAULT NULL,
